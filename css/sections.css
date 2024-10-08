@@ -1,0 +1,98 @@
+section {
+    position: relative;
+    z-index: 9;
+    padding: 10px 20px; /* Add horizontal padding for small screens */
+    animation: fadeIn 1s ease forwards;
+    overflow: visible;
+    margin: 0 auto;
+    max-width: 1700px;
+    transition: padding 0.3s ease, font-size 0.3s ease;
+}
+
+/* Common styles for sections with specific backgrounds */
+#about, #about2, #gaming, #programming, #music, #contact {
+    position: relative;
+    text-align: center;
+    background: #1f2122; /* Default background color */
+    z-index: 998;
+    color: #ededed; /* Default text color */
+    padding: 60px 0; /* Consistent padding for sections */
+}
+
+/* Specific section colors */
+.gaming-section,
+.programming-section,
+.music-section {
+    background-color: #1f2122; /* Ensure all have the same background */
+}
+
+@media (max-width: 1920px) {
+    #gaming,
+    #programming,
+    #music {
+        padding: 20px 10px; /* Adjust padding for specific sections */
+    }
+
+    #about, #about2 {
+        padding: 20px 10px; /* Keep padding for #about and #about2 */
+    }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    section {
+        padding: 20px 10px; /* Reduce padding on smaller screens */
+    }
+
+    .spacer {
+        font-size: 14px;
+      }
+
+    h4 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .imp-rights {
+        font-size: 14px;
+    }
+
+    .impressum {
+        font-size: 14px;
+    }
+
+    .policy {
+        font-size: 14px;
+    }
+}
+
+  
+@media (max-width: 480px) {
+    .spacer {
+      font-size: 12px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .imp-rights {
+        font-size: 12px;
+    }
+
+    .impressum {
+        font-size: 12px;
+    }
+
+    .policy {
+        font-size: 12px;
+    }
+  }
+  

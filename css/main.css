@@ -1,0 +1,328 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  line-height: 1.6;
+  background-color: #1f2122;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+  }
+}
+
+.fade-in {
+  width: 100%;
+  padding: 20px;
+  opacity: 0.1;
+}
+
+.fade-in2 {
+  width: 100%;
+  padding: 20px;
+  opacity: 0.1;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.spacer {
+  word-spacing: 2px;
+  padding-top: 20px;
+  width: 97%;
+}
+
+.about-container,
+.about-container2,
+.about-container3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 90%; /* Responsive width */
+  max-width: 1300px; /* Limit max width */
+  margin: 20px auto; /* Center containers */
+  align-items: center; /* Center align items */
+}
+
+.icons {
+  align-items: center;
+  max-width: 50px; /* Increase width for better touch targets */
+  user-select: none;
+}
+
+.icon1, .icon2, .icon3, .icon4 {
+  margin: 10px 0;
+}
+
+
+.about-card2,
+.about-card3,
+.about-card4,
+.about-card5 {
+  position: relative;
+  background-color: #27292a;
+  border-radius: 24px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%; /* Full width for responsiveness */
+  max-width: 1300px; /* Max width for cards */
+  margin-top: 20px; /* Corrected typo from 20x to 20px */
+  padding: 20px; /* Add padding for inner spacing */
+}
+
+.about-card {
+  position: relative;
+  background-color: #27292a;
+  border-radius: 24px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%; /* Full width for responsiveness */
+  max-width: 1300px; /* Max width for cards */
+  padding: 20px; /* Add padding for inner spacing */
+  margin-top: 130px;
+}
+
+.about-card img {
+  display: block; /* Change to block for better layout */
+  border-radius: 8px;
+  width: 95%; /* Full width for images */
+  height: auto;
+  margin: 0 auto;
+  user-select: none;
+}
+
+.about-card:hover,
+.about-card2:hover,
+.about-card3:hover,
+.about-card4:hover,
+.about-card5:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.container,
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.about-title {
+  position: absolute;
+  font-size: 1rem;
+  text-align: left;
+  top: 0;
+  width: 120%;
+  margin: 20px 0;
+  transition: font-size 0.3s ease;
+}
+
+.about-text {
+  position: absolute; /* Absolute positioning for text overlay */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  padding: 20px; /* Add some padding for spacing */
+  color: #ededed; /* Make the text visible */
+  font-size: 2rem; /* Adjust font size */
+  line-height: 1.6; /* Adjust line height */
+  display: flex; /* Use flexbox to vertically align */
+  flex-direction: column; /* Arrange text in column */
+  justify-content: center; /* Center text vertically */
+  height: 100%; /* Full height to match the image */
+  text-align: left;
+  margin-left: 25px;
+  transition: font-size 0.3s ease, line-height 0.3s ease, margin-left 0.3s ease;
+}
+
+.about-content {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  width: 100%;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column; /* Stack the icons vertically */
+  margin-right: 20px; /* Space between icons and text */
+}
+
+.icons img {
+  margin-bottom: 15px; /* Space between icons */
+  width: 50px; /* Set a specific width for the icons */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.about-text2 {
+  flex: 1; /* Allow the text to take the remaining space */
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column; /* Stack icon above text */
+  align-items: center; /* Center the items horizontally */
+  margin-bottom: 20px; /* Space between text sections */
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack icon and text vertically */
+  align-items: center; /* Center icon and text */
+}
+
+.icon-wrapper img {
+  margin-bottom: 10px; /* Space between icon and text */
+  width: 50px; /* Set a specific width for the icons */
+  height: auto; /* Maintain aspect ratio */
+}
+
+h4 {
+  color: #e56699;
+  font-size: 32px;
+}
+
+h2 {
+  color: #e56699;
+  font-size: 32px;
+}
+
+@media (max-width: 768px) {
+  .about-text {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    margin-left: 5px;
+  }
+
+  .about-title {
+    font-size: 0.6rem;
+  }
+
+  .about-content {
+    flex-direction: column; /* Stack icons and text vertically on smaller screens */
+    align-items: center; /* Center items on smaller screens */
+  }
+
+  .text-section {
+    align-items: center; /* Center items */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-card {
+    width: 80%;
+  }
+
+  .about-text  {
+      font-size: 1rem;
+      line-height: 0.9;
+      margin-left: -5px;
+  }
+
+  .about-title {
+    font-size: 0.4rem;
+  }
+}
+
+.image-container {
+  position: relative; /* Set relative position to allow absolute positioning of the text */
+  width: 100%;
+  max-width: 1200px; /* Adjust as needed */
+  overflow: hidden; /* Hide any overflow */
+}
+
+.image {
+  width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Keep aspect ratio */
+  display: block;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  background: #e56699;
+  color: #ededed;
+  font-size: 18px;
+  padding: 15px 30px;
+  text-decoration: none;
+  user-select: none;
+  margin: 20px auto; /* Center the button */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background: #ededed;
+  color: #e56699;
+}
+
+.extra-galleries {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.extra-galleries.open {
+  max-height: 1000px;
+}
+
+.extra-galleries.open ~ .btn {
+  margin-top: 20px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 1920px) {
+  .page-content {
+      width: 100%;
+      padding: 0 15px; /* Adjust padding for mobile */
+  }
+
+  .about-container,
+  .about-container2 {
+      width: 90%; /* Wider on mobile */
+  }
+
+  .about-container3 {
+      width: 100%; /* Full width */
+  }
+
+  .icons {
+      max-width: 30px; /* Adjust icon width */
+  }
+
+  .about-card {
+      width: 100%; /* Full width on mobile */
+  }
+
+  .btn {
+      font-size: 16px; /* Adjust button font size */
+      padding: 10px 20px; /* Adjust button padding */
+  }
+}

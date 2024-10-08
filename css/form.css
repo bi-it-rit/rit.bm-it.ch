@@ -1,0 +1,160 @@
+form {
+    max-width: 500px; /* Keep this as a standard width */
+    margin: auto; /* Center the form on the page */
+}
+
+form label {
+    display: block;
+    margin: 25px 0 5px; /* Spacing between label and input */
+    font-weight: bold; /* Bold for better visibility */
+    color: #ededed; /* Ensure label text is legible */
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px; /* Increase padding for a better touch target */
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+    background-color: #1f2122; /* Match background color */
+    color: #D3D3D3; /* Set text color for input fields */
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #d96699; /* Highlight border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(217, 102, 153, 0.5); /* Subtle shadow on focus */
+}
+
+form button {
+    display: inline-block;
+    background: #d96699; /* Button background color */
+    color: #ededed; /* Button text color */
+    padding: 12px 20px; /* Increase padding for better usability */
+    margin-top: 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px; /* Rounded button */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s, transform 0.2s; /* Transition effects */
+    user-select: none;
+}
+
+form button:hover {
+    background: #ededed; /* Button hover background */
+    color: #d96699; /* Button hover text color */
+}
+
+h5 {
+    font-size: 32px;
+    color: #e56699;
+    margin-bottom: 40px;
+    margin-top: 15px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.form-card {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px; /* Added padding for inner content */
+    position: relative;
+    border-radius: 24px; /* Maintain rounded corners */
+    background-color: #27292a; /* Card background color */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition effects */
+    width: 600px;
+    height: 510px;
+}
+
+.form-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-area,
+.form-area2,
+.msg-input {
+    border: 2px solid #333; /* Consistent border color */
+    padding: 12px; /* Increased padding */
+    min-height: 40px;
+    width: calc(100% - 24px); /* Full width minus padding */
+    border-radius: 4px; /* Consistent border radius */
+    font-size: 14px; /* Consistent font size */
+    outline: none;
+    margin: 0 auto;
+    background-color: #1f2122; /* Match input background */
+    color: #D3D3D3; /* Text color */
+    transition: background 0.3s; /* Background transition */
+}
+
+.form-area.filled,
+.form-area2.filled,
+.msg-input.filled {
+    background-color: #1f2122; /* Keep background consistent when filled */
+    color: #ededed; /* Keep text color consistent when filled */
+}
+
+.form-area:focus,
+.form-area2:focus,
+.msg-input:focus {
+    border-color: #d96699; /* Highlight border on focus */
+}
+
+input {
+    background-color: #1f2122; /* Match input background */
+    color: #ededed; /* Text color */
+    width: 100%;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+input::placeholder {
+    font-family: 'Poppins', sans-serif; /* Ensure font is used */
+    font-weight: 400;
+    opacity: 0.5; /* Placeholder visibility */
+    transition: opacity 0.2s linear;
+}
+
+input:focus::placeholder {
+    opacity: 0.7; /* Change opacity on focus */
+}
+
+@media (max-width: 1300px) {
+    .form-card {
+        width: 46vw;
+    }
+}
+
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    form {
+        padding: 0 20px; /* Add padding on smaller screens */
+    }
+
+    .form-card {
+        width: calc(100% - 40px); /* Adjust width for smaller screens */
+    }
+
+    .form-area,
+    .form-area2,
+    .msg-input {
+        width: calc(100% - 24px); /* Ensure full width */
+        min-width: 150px;
+    }
+
+    form button {
+        padding: 8px 2vw;
+    }
+}

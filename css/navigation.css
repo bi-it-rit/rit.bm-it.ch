@@ -1,0 +1,74 @@
+.nav-bar {
+    position: relative;
+    border-radius: 8px;
+    width: 68.4%;
+    height: 6px;
+    background-color: #27292a;
+    top: 5.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.navigation {
+    flex: 1; /* Allow navigation to take remaining space */
+    display: flex; /* Flexbox for navigation */
+    justify-content: center; /* Center the navigation items */
+    max-width: 100%; /* Limit the maximum width */
+    padding: 5px; /* Add some padding */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.navigation a {
+    color: #ededed;
+    transition: color 0.3s, font-size 0.3s ease;
+}
+
+.navigation a.active {
+    color: #e56699;
+    font-weight: bold;
+}
+
+.navigation ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Flexbox for the list */
+    justify-content: center; /* Center the list items */
+}
+
+.navigation li {
+    margin: 0 15px; /* Space between navigation items */
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.navigation a {
+    text-decoration: none; /* Remove underline */
+    color: #ededed; /* Text color */
+    font-size: 1rem; /* Default font size */
+    transition: color 0.3s ease, font-size 0.3s ease, margin 0.3s ease; /* Transition for hover effect */
+}
+
+.navigation a:hover {
+    color: #e56699; /* Change color on hover */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .navigation {
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+    
+    .navigation a {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation li {
+        margin: 0 5px; /* Further reduce space between items */
+    }
+    .navigation a {
+        font-size: 0.7rem; /* Further adjust font size */
+    }
+}

@@ -1,0 +1,40 @@
+.header {
+    background: #1f2122; /* Background color of the header */
+    color: #ededed; /* Text color */
+    position: fixed; /* Fixes the header at the top */
+    z-index: 100000; /* High z-index for overlaying */
+    width: 100%; /* Full width */
+    height: auto; /* Auto height to fit content */
+}
+
+.header-container {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between title and nav */
+    align-items: center; /* Center vertically */
+    max-width: 1200px; /* Limit max width */
+    margin: 0 auto; /* Center the header */
+    padding: 10px; /* Padding for spacing */
+    width: 100%; /* Full width */
+}
+
+.title {
+    display: flex; /* Flexbox for title and arrow */
+    align-items: center; /* Center arrow vertically with title */
+    justify-content: center;
+    font-size: 2rem; /* Use relative font size */
+    font-weight: bold; /* Bold font */
+    color: #e56699; /* Title color */
+    transition: font-size 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.8rem; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .title  {
+        font-size: 1.6rem; /* Further reduce space between items */
+    }
+}

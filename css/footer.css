@@ -1,0 +1,173 @@
+footer {
+    background: #1f2122;
+    color: #ededed;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 2px;
+    position: relative;
+    transition: font-size 0.3s ease;
+}
+
+.footer-bar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    width: 68.4%;
+    height: 6px;
+    background-color: #27292a;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px; /* Added padding for better spacing */
+    transition: font-size 0.3s ease;
+}
+
+.footer-content p {
+    margin: 0;
+    text-align: center;
+}
+
+.socials {
+    display: flex; /* Use flexbox for better alignment */
+    justify-content: center;
+    max-width: 300px; /* Slightly wider for social icons */
+    margin-top: 10px; /* Consistent spacing above */
+}
+
+.socials a {
+    color: #ededed;
+    margin: 0 15px; /* Increased margin for better spacing */
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #e56699;
+}
+
+.imp-rights {
+    margin: 10px 0; /* Vertical spacing */
+}
+
+.footer-tabs {
+    display: flex;
+    justify-content: center; /* Center tabs horizontally */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.impressum a,
+.policy a {
+    text-decoration: none;
+    cursor: pointer;
+    max-width: 150px; /* Consistent max width for all */
+    margin: 5px 10px; /* Add horizontal and vertical spacing */
+    transition: color 0.3s, transform 0.2s; /* Added transform effect */
+    color: #ededed;
+}
+
+.impressum a:hover,
+.policy a:hover {
+    color: #e56699;
+}
+
+.imp-mail {
+    color: inherit;
+    text-decoration: none;
+}
+
+.imp-mail:hover {
+    text-decoration: underline;
+    color: #e56699;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #27292a;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px; /* Max width for larger screens */
+    position: relative; /* For positioning the close button */
+    border-radius: 5px; /* Optional: round corners */
+    line-height: 2;
+    text-align: left;
+}
+
+.modal-content.hidden {
+    display: none;
+}
+
+.modal-content:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #e56699;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content.policy-content {
+    max-width: 900px; /* Adjust max width for policy */
+}
+
+.modal-content.impressum-content {
+    max-width: 450px; /* Adjust max width for impressum */
+}
+
+.cm-link {
+    text-decoration: none;
+    color: inherit; /* Inherit text color */
+}
+
+.cm-link:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #e56699; /* Change color on hover */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .impressum,
+    .policy {
+        max-width: 100%; /* Allow full width on smaller screens */
+        font-size: 14px; /* Smaller font size for better fit */
+    }
+    
+    .socials {
+        flex-direction: row; /* Stack social icons on small screens */
+    }
+}
