@@ -18,6 +18,7 @@
 }
 
 .gallery a,
+.gallery2 a,
 .gallery3 a,
 .gallery-programming a,
 .gallery-music a {
@@ -30,15 +31,8 @@
     position: relative;
 }
 
-.gallery2 a {
-    flex-shrink: 0;
-    width: calc(33.33% - 60px); /* Adjust width for spacing between items */
-    margin: 30px; /* Margin around each item */
-    margin-bottom: -30px;
-    margin-top: -10px;
-    text-align: center;
-    display: inline-block;
-    position: relative;
+.gallery2 {
+    margin-top: 0;
 }
 
 .gallery img,
@@ -79,8 +73,10 @@
         width: calc(50% - 40px); /* Two items per row on smaller screens */
     }
 
-    .gallery {
-        margin: 20px auto; /* Reduce margins on mobile */
+    .gallery,
+    .gallery-programming,
+    .gallery-music {
+        margin-top: 0;
     }
 }
 
