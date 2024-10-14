@@ -1,9 +1,9 @@
 @font-face {
-    font-family: 'PTSerif';
-    src: url('../fonts/PTSerif-Regular.ttf') format('truetype');
-    font-weight: 400;
-  }
-  
+  font-family: 'PTSerif';
+  src: url('../fonts/PTSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -65,7 +65,7 @@ header {
 
 .nav-wrapper {
   background: #1f2122;
-  width: 90%; /* Or 75%, adjust as needed for responsiveness */
+  width: 100%;
   height: auto;
   margin: 0 auto; /* Center the wrapper */
   padding: 15px 0;
@@ -133,7 +133,8 @@ li {
   align-items: center; /* Center align items */
 }
 
-.diablo-card {
+.diablo-card,
+.diablo-card2 {
   position: relative;
   background-color: #27292a;
   border-radius: 8px;
@@ -147,17 +148,7 @@ li {
 }
 
 .diablo-card2 {
-  position: relative;
-  background-color: #27292a;
-  border-radius: 8px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  width: 75vw; /* Full width for responsiveness */
-  height: auto;
-  padding: 20px; /* Add padding for inner spacing */
-  margin-bottom: 40px;
-  margin-top: 100px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  will-change: transform;
+  margin-bottom: 40px; /* Specific margin for the second card */
 }
 
 .diablo-card:hover, .diablo-card2:hover  {
@@ -197,7 +188,9 @@ img {
   user-select: none;
 }
 
-.review-container {
+.review-container,
+.openworld-container,
+.experience-container {
   display: flex;
   flex-wrap: wrap; 
   align-items: center;
@@ -205,24 +198,33 @@ img {
   margin-top: 60px;
 }
 
-.review-img {
+.review-img,
+.openworld-img,
+.openworld-img2,
+.experience-img {
   flex: 2;
   max-width: 35%;
   border-radius: 8px;
   height: auto;
 }
 
-.review-text-container {
+.review-text-container,
+.experience-container {
   flex: 1;
-  margin-left: 20px;
+  text-align: left;
 }
 
-.review-title {
+.openworld-text-container {
+  flex: 1;
+  text-align: right;
+}
+
+.review-title,
+.experience-title {
   color: #e81e0b;
   flex: 2;
   font-size: 26px;
   margin-left: 40px;
-  text-align: left;
   background: url('/images/flask.jpg');
   background-size: 300%;
   -webkit-background-clip: text;
@@ -230,49 +232,23 @@ img {
   animation: colorChange 40s linear infinite;
 }
 
-.review-text {
-  margin: 0 40px;
-  margin-top: 20px;
-  text-align: left;
-}
-
-.openworld-container {
-  display: flex;
-  flex-wrap: wrap-reverse; 
-  align-items: center;
-  margin: 20px;
-  margin-top: 60px;
-}
-
-.openworld-img {
-  flex: 2;
-  max-width: 35%;
-  border-radius: 8px;
-  height: auto;
-}
-
-.openworld-text-container {
-  flex: 1;
-  margin-right: 20px;
-}
-
 .openworld-title {
   color: #e81e0b;
   flex: 2;
   font-size: 26px;
   margin-right: 40px;
-  text-align: right;
   background: url('/images/flask.jpg');
   background-size: 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: colorChange 30s linear infinite;
+  animation: colorChange 40s linear infinite;
 }
 
-.openworld-text {
+.review-text,
+.openworld-text,
+.experience-text {
   margin: 0 40px;
   margin-top: 20px;
-  text-align: right;
 }
 
 footer {
@@ -368,7 +344,6 @@ footer {
 }
 
 .imp-mail:hover {
-  text-decoration: underline;
   color: #e81e0b;
 }
 
@@ -523,43 +498,356 @@ footer {
   text-align: left;
 }
 
-@media (max-width: 480px) {
-  .navigation li {
-      margin: 0 5px; /* Further reduce space between items */
-  }
-  .navigation a {
-      font-size: 0.7rem; /* Further adjust font size */
-  }
-}
-
 h2 {
   color: #e81e0b;
   font-size: 32px;
 }
 
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-  .impressum,
-  .policy {
-      max-width: 100%; /* Allow full width on smaller screens */
-      font-size: 14px; /* Smaller font size for better fit */
+@media (max-width: 1200px) {
+  .diablo-title {
+      font-size: 1.8rem; /* Decrease title font size on smaller screens */
+  }
+
+  .diablo-card,
+  .diablo-card2 {
+      width: 90vw; /* Adjust width to be more fluid */
+  }
+
+  .review-img,
+  .openworld-img,
+  .openworld-img2,
+  .experience-img {
+      max-width: 100%; /* Full width for images on smaller devices */
+      margin-bottom: 20px; /* Space below images */
+  }
+
+  .review-title,
+  .openworld-title,
+  .experience-title {
+      font-size: 24px; /* Smaller titles for mobile */
+      margin-left: 20px; /* Adjust left margin */
+  }
+
+  .footer-tabs {
+      flex-direction: column; /* Stack tabs vertically */
+      align-items: center; /* Center tabs on smaller screens */
+  }
+
+  .diablo-banner {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .openworld-container {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items horizontally */
+      justify-content: center;
+      text-align: center; /* Center text content */
+      margin: 20px 0; /* Adjust spacing */
+  }
+
+  .review-img,
+  .openworld-img,
+  .openworld-img2,
+  .experience-img {
+      width: 70%; /* Reduce image width to 70% */
+      margin-bottom: 20px; /* Space below each image */
+  }
+
+  .review-text-container,
+  .openworld-text-container,
+  .experience-text-container {
+      max-width: 90%; /* Set max width of text container */
+      margin-left: 0; /* No left margin */
+      text-align: center; /* Center-align the text */
+      margin-bottom: 20px; /* Add space between text and next image */
+  }
+
+  .review-title,
+  .openworld-title,
+  .experience-title {
+      font-size: 26px; /* Adjust the title size */
+      margin-bottom: 10px; /* Space below title */
+      margin-left: 0;
+      margin-right: 0;
+      text-align: center;
+  }
+
+  .experience-text {
+    text-align: center;
+  }
+
+  .review-container {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap-reverse;
+    margin-bottom: 40px;
+  }
+
+  .experience-container {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap-reverse;
+    margin-bottom: 40px;
+  }
+
+  .openworld-container,
+  .openworld-img {
+    margin-bottom: 0;
+  }
+
+  .openworld-img2 {
+    margin-bottom: 60px;
+  }
+
+  .nav-wrapper {
+      width: 1024px;
+  }
+
+  .diablo-text {
+      text-align: center; /* Center all text elements */
+      margin-bottom: 0;
+  }
+
+  h1, h2 {
+      text-align: center; /* Center headings */
+  }
+
+  h1 {
+      font-size: 28px; /* Adjust h1 size for smaller screens */
+      margin-bottom: 20px; /* Add space below */
+  }
+
+  h2 {
+      font-size: 24px; /* Adjust h2 size for smaller screens */
+      margin-bottom: 20px; /* Add space below */
+  }
+
+  .diablo-banner {
+    width: 70%;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .diablo-title {
+      font-size: 1.6rem; /* Further reduce title font size */
+  }
+
+  h1 {
+      font-size: 1.8rem; /* Decrease header font size */
+  }
+
+  .nav-wrapper {
+    width: 100%;
+      padding: 10px 0; /* Reduced padding */
+  }
+
+  .diablo-text {
+      font-size: 28px; /* Smaller text on mobile */
+  }
+
+  .diablo-banner {
+    width: 80%;
+  }
+
+  .review-title,
+  .openworld-title {
+      font-size: 24px; /* Further reduce title font size */
+      margin-left: 10px; /* Adjust margin for titles */
+      text-align: center;
+      margin-right: 0;
+      margin-left: 0;
+  }
+
+  .review-container {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap-reverse;
+    margin-bottom: 20px;
+  }
+
+  .review-text,
+  .openworld-text,
+  .experience-text {
+    width: 100%;
+    margin: 0;
+  }
+
+  .review-img {
+    margin-bottom: 40px;
+  }
+
+  .footer-content {
+      padding: 5px; /* Reduced padding for footer */
+  }
+
+  .socials a {
+      font-size: 1.2rem; /* Smaller social icons */
+  }
+}
+
+@media (max-width: 600px) {
+  .diablo-title {
+      font-size: 1.4rem; /* Smallest title font size */
+  }
+
+  .diablo-card,
+  .diablo-card2 {
+      width: 95vw; /* Adjust for small screens */
+  }
+
+  h1 {
+      font-size: 1.5rem; /* Smallest header font size */
+  }
+
+  .review-title,
+  .openworld-title {
+      font-size: 24px; /* Smallest titles */
+  }
+
+  .review-text,
+  .openworld-text,
+  .experience-text {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .openworld-img {
+    margin-bottom: 0;
+  }
+
+  .review-img,
+  .openworld-img,
+  .experience-img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 425px) {
+  .diablo-title {
+      font-size: 1.4rem; /* Smallest title font size */
+  }
+
+  .diablo-card,
+  .diablo-card2 {
+      width: 95vw; /* Adjust for small screens */
+  }
+
+  .diablo-spacer {
+    margin-bottom: 40px;
+  }
+
+  h1 {
+      font-size: 1.5rem; /* Smallest header font size */
+  }
+
+  .review-title,
+  .openworld-title {
+      font-size: 24px; /* Smallest titles */
+  }
+
+  .review-text,
+  .openworld-text,
+  .experience-text {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .review-container,
+  .experience-container {
+    margin: 0;
+  }
+
+  .diablo-card2 {
+    padding-bottom: 40px;
+  }
+
+  .openworld-container {
+    margin-bottom: 40px;
+  }
+
+  .review-img,
+  .openworld-img,
+  .openworld-img2,
+  .experience-img {
+    width: 90%;
+  }
+
+  .openworld-img2 {
+    margin-bottom: 0;
+  }
+
+  .review-img {
+    margin-bottom: 20px;
   }
   
-  .socials {
-      flex-direction: row; /* Stack social icons on small screens */
+  .diablo-banner {
+    width: 100%;
   }
-
-  .modal {
-      padding-top: 25%;
-  }
-
-  .navigation {
-    padding: 5px; /* Reduce padding for smaller screens */
 }
 
-.navigation a {
-    font-size: 0.9rem; /* Adjust font size for smaller screens */
-}
+@media (max-width: 325px) {
+  .diablo-title {
+      font-size: 1.4rem; /* Smallest title font size */
+  }
+
+  .diablo-card,
+  .diablo-card2 {
+      width: 95vw; /* Adjust for small screens */
+  }
+
+  .diablo-spacer {
+    margin-bottom: 40px;
+  }
+
+  h1 {
+      font-size: 1.5rem; /* Smallest header font size */
+  }
+
+  .review-title,
+  .openworld-title {
+      font-size: 24px; /* Smallest titles */
+  }
+
+  .review-text,
+  .openworld-text,
+  .experience-text {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .review-container,
+  .experience-container {
+    margin: 0;
+  }
+
+  .diablo-card2 {
+    padding-bottom: 40px;
+  }
+
+  .openworld-container {
+    margin-bottom: 40px;
+  }
+
+  .review-img,
+  .openworld-img,
+  .openworld-img2,
+  .experience-img {
+    width: 90%;
+  }
+
+  .openworld-img2 {
+    margin-bottom: 0;
+  }
+
+  .review-img {
+    margin-bottom: 20px;
+  }
 }
 
 @keyframes fadeInText {
@@ -597,11 +885,6 @@ h2 {
   }
 }
 
-/* Additional style for timing */
-.title-container {
-  animation: fadeInContainer 1s ease-out;
-}
-
 @keyframes fadeInContainer {
   0% {
       opacity: 0;
@@ -626,15 +909,6 @@ h2 {
 @keyframes colorChange {
   0% { background-position: 0%; }
   100% { background-position: 100%; }
-}
-
-.subtitle {
-  font-family: 'Cinzel', serif;
-  color: #999;
-  font-size: 24px;
-  margin-top: 20px;
-  opacity: 0;
-  animation: fadeInSubtitle 3s ease-out forwards 4s; /* Subtitle appears after main title */
 }
 
 @keyframes fadeInSubtitle {
