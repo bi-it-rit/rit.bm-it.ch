@@ -1,4 +1,4 @@
-// Contact me 
+// Contact me form
 document.querySelector("#contact-form").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -39,7 +39,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Smooth Scroll to Anchor Function
 function scrollToAnchor(targetId) {
     const targetElement = document.querySelector(targetId); // Find the target element by ID
-    if (!targetElement) return; // Exit if the target does not exist
+    if (!targetElement) return;
 
     const header = document.querySelector('header'); // Find the header to account for its height
     const headerHeight = header ? header.offsetHeight : 0; // Get header height, default to 0 if header is not found
@@ -128,7 +128,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
 
 // Fade-in animation for sections
 const faders = document.querySelectorAll('.fade-in');
@@ -259,47 +258,35 @@ messageInput.addEventListener('input', () => {
     }
 });
 
-// Modals
-const impressumModal = document.getElementById("impressumModal");
-const privacyModal = document.getElementById("privacyPolicyModal");
+// script.js (JavaScript for Modals)
 
-const spanImpressum = document.getElementById("closeModal");
-const spanPrivacy = document.getElementById("closePrivacyPolicy");
+document.addEventListener('DOMContentLoaded', function () {
+    const impressumModal = document.getElementById("impressumModal");
+    const privacyPolicyModal = document.getElementById("privacyPolicyModal");
 
-function openModal(modal) {
-    modal.style.display = "block";
-    document.body.style.overflow = "hidden";
-}
-
-function closeModal(modal) {
-    modal.style.display = "none";
-    document.body.style.overflow = "auto";
-}
-
-document.querySelector('.impressum').onclick = function() {
-    openModal(impressumModal);
-};
-
-document.querySelector('.policy').onclick = function() {
-    openModal(privacyModal);
-};
-
-spanImpressum.onclick = function() {
-    closeModal(impressumModal);
-};
-
-spanPrivacy.onclick = function() {
-    closeModal(privacyModal);
-};
-
-window.onclick = function(event) {
-    if (event.target === impressumModal) {
-        closeModal(impressumModal);
-    } else if (event.target === privacyModal) {
-        closeModal(privacyModal);
+    // Open Impressum Modal
+    document.getElementById("openImpressum").onclick = function () {
+        impressumModal.style.display = "block";
     }
-};
 
-document.querySelector('.cm-link').onclick = function() {
-    closeModal(privacyModal);
-};
+    // Open Privacy Policy Modal
+    document.getElementById("openPrivacyPolicy").onclick = function () {
+        privacyPolicyModal.style.display = "block";
+    }
+
+    // Close modal when clicking on <span> (x)
+    document.querySelectorAll(".close").forEach(span => {
+        span.onclick = function () {
+            impressumModal.style.display = "none";
+            privacyPolicyModal.style.display = "none";
+        }
+    });
+
+    // Close modal when clicking anywhere outside of the modal
+    window.onclick = function (event) {
+        if (event.target === impressumModal || event.target === privacyPolicyModal) {
+            impressumModal.style.display = "none";
+            privacyPolicyModal.style.display = "none";
+        }
+    }
+});

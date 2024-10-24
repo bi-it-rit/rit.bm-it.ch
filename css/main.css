@@ -21,8 +21,6 @@ html, body {
 /* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
-  text-align: center;
-  justify-content: center;
 }
 
 /* Body styling */

@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/diablo.css">
     <link rel="icon" href="images/diablo-icon.png">
     <title>Diablo IV Review</title>
 </head>
 <body>
+
+    <!-- Navigation menu -->
     <header>
         <div class="diablo-header">
-            <div class="nav-wrapper"> <!-- New Wrapper -->
+            <div class="nav-wrapper">
                 <nav class="navigation">
                     <ul>
                         <li><a href="#review" class="links">Review</a></li>
                         <li><a href="#experience" class="links">My Experience</a></li>
                     </ul>
                 </nav>
-                
             </div>
             <div class="nav-bar"></div>
         </div>
     </header>
     
+    <!-- Banner section -->
     <section class="fade-in banner">
         <div class="banner-container">
             <div class="banner-grid">
@@ -31,7 +34,7 @@
                     <div class="banner-container">
                         <div class="banner-text">
                             <p><a class="banner-title">WELCOME TO</a></p>
-                            <img src="/images/banner2.png" class="diablo-banner">
+                            <a href="https://diablo4.blizzard.com/" target="_blank"><img src="/images/banner2.png" class="diablo-banner" ></a>
                             <p><a class="title-sequence" href="https://diablo4.blizzard.com/" target="_blank">SANCTUARY AWAITS YOU</a></p>
                         </div>       
                     </div>
@@ -39,8 +42,9 @@
             </div>
         </div>
     </section>
-    
-    <section class="fade-in diablo-review" id="review">
+
+     <!-- Review section -->
+    <section id="review" class="fade-in diablo-review">
         <div class="diablo-container">
             <div class="diablo-grid">
                 <div class="diablo-card">
@@ -123,7 +127,8 @@
         </div>
     </section>
 
-    <section class="fade-in diablo-experience" id="experience">
+    <!-- Personal experience section -->
+    <section id="experience" class="fade-in diablo-experience">
         <div class="diablo-container">
             <div class="diablo-grid">
                 <div class="diablo-card2">
@@ -168,7 +173,7 @@
                                 The expansion also introduced new zones, world events, and tweaks to the overall gameplay that make the game more dynamic. The grind that once pushed me away is now more fun than ever with new rewards and challenges to keep you engaged. The return of players has also made the world feel more alive, with more people tackling the high-level content, trading, and engaging in multiplayer events.
                                 <br>
                                 <br>
-                                As of now, I’ve sunk a whopping 260 hours into the game, and it’s still holding my interest. I’m always discovering new ways to improve my builds, tackle more difficult dungeons, and collect rare items. It’s hard to believe that I once thought the game was getting boring because now it feels like there’s so much to do that I can’t put it down.                      
+                                As of now, I’ve sunk a whopping 300 hours into the game, and it’s still holding my interest. I’m always discovering new ways to improve my builds, tackle more difficult dungeons, and collect rare items. It’s hard to believe that I once thought the game was getting boring because now it feels like there’s so much to do that I can’t put it down.                      
                         </div>
                 </div>
                 </div>
@@ -176,20 +181,23 @@
         </div>
     </section>
 
+    <!-- Footer section for copyright and additional links -->
     <footer>
         <div class="footer-container">
             <div class="footer-bar"></div>
             <div class="footer-content">
                 <p class="imp-rights">&copy; 2024 Leandro's Portfolio. All rights reserved.</p>
 
-                <div id="playtime"></div>
-
+                <!-- Prevents navigation; triggers JavaScript without page refresh -->
                 <div class="impressum" id="openImpressum">
                     <a href="javascript:void(0)">Impressum</a>
                 </div>
+
+                <!-- Prevents navigation; triggers JavaScript without page refresh -->
                 <div class="policy" id="openPrivacyPolicy">
                     <a href="javascript:void(0)">Terms of Service</a>
                 </div>
+                
                 <div class="socials">
                     <a href="https://www.instagram.com/lxle_icdd" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.tiktok.com/@lxle.icdd" target="_blank"><i class="fab fa-tiktok"></i></a>
@@ -199,6 +207,7 @@
             </div>
         </div>
     
+        <!-- Impressum Tab -->
         <div id="impressumModal" class="modal impressum-modal">
             <div class="modal-content impressum-content">
                 <span class="close" id="closeModal">&times;</span>
@@ -212,6 +221,7 @@
             </div>
         </div>
     
+        <!-- Policy Tab -->
         <div id="privacyPolicyModal" class="modal privacy-modal">
             <div class="modal-content policy-content">
                 <span class="close" id="closePrivacyPolicy">&times;</span>
@@ -225,6 +235,7 @@
             </div>
         </div>
     </footer>
+    <!-- JS script link -->
     <script src="diablo-script.js"></script>
 </body>
 </html>

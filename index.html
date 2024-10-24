@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leandro's Portfolio</title>
+    <!-- Stylesheets for different sections of the site -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/sections.css">
@@ -11,10 +12,12 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/footer.css">
+    <!-- Favicon for the website -->
     <link rel="icon" href="images/web-icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Main title and navigation menu -->
     <header class="header">
             <h1 class="title" id="leandro">
                 <span id="leandro-name">Leandro</span>
@@ -31,6 +34,7 @@
         <div class="nav-bar"></div>
     </header>
     
+    <!-- Introduction section -->
     <section id="about" class="fade-in2">
             <div class="container">
                 <div class="about-grid">
@@ -52,6 +56,7 @@
             </div>
     </section>
     
+    <!-- Detailed about me section -->
     <section id="about2" class="fade-in">
         <div class="container">
             <div class="about-grid">
@@ -101,6 +106,7 @@
         </div>
     </section>
     
+    <!-- Gaming section showcasing favorite games -->
     <section id="gaming" class="fade-in gaming-section">
         <div class="container2">
             <div class="about-grid3">
@@ -148,6 +154,7 @@
         </div>
     </section>
     
+    <!-- Programming section with interests and projects -->
     <section id="programming" class="fade-in programming-section">
         <div class="container">
             <div class="about-grid3">
@@ -171,6 +178,7 @@
         </div>
     </section>
 
+    <!-- Music section showcasing favorite albums -->
     <section id="music" class="fade-in music-section">
         <div class="container">
             <div class="about-grid3">
@@ -195,6 +203,7 @@
         </div>
     </section>
 
+    <!-- Contact section with a contact form -->
     <section id="contact" class="fade-in">
         <div class="form-container">
             <div class="form-grid">
@@ -223,17 +232,22 @@
         </div>
     </section>
     
+    <!-- Footer with copyright information -->
     <footer>
         <div class="footer-container">
             <div class="footer-bar"></div>
             <div class="footer-content">
                 <p class="imp-rights">&copy; 2024 Leandro's Portfolio. All rights reserved.</p>
+    
+                <!-- Prevents navigation; triggers JavaScript without page refresh -->
                 <div class="impressum" id="openImpressum">
                     <a href="javascript:void(0)">Impressum</a>
                 </div>
+                <!-- Prevents navigation; triggers JavaScript without page refresh -->
                 <div class="policy" id="openPrivacyPolicy">
                     <a href="javascript:void(0)">Terms of Service</a>
                 </div>
+                
                 <div class="socials">
                     <a href="https://www.instagram.com/lxle_icdd" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.tiktok.com/@lxle.icdd" target="_blank"><i class="fab fa-tiktok"></i></a>
@@ -243,6 +257,7 @@
             </div>
         </div>
     
+        <!-- Impressum Tab -->
         <div id="impressumModal" class="modal impressum-modal">
             <div class="modal-content impressum-content">
                 <span class="close" id="closeModal">&times;</span>
@@ -256,6 +271,7 @@
             </div>
         </div>
     
+        <!-- Policy Tab -->
         <div id="privacyPolicyModal" class="modal privacy-modal">
             <div class="modal-content policy-content">
                 <span class="close" id="closePrivacyPolicy">&times;</span>
@@ -265,10 +281,12 @@
                 <br>
                 <p class="pol-width">This website is not monetized in any way. No advertisements, sponsorships, or sales are facilitated through this platform. Any third-party tools or content are used strictly for educational purposes and remain non-commercial.</p>
                 <br>
-                <p class="pol-width">If any content, including images or service integrations, is believed to violate fair use or intellectual property rights, please contact me at <a class="imp-mail" href="mailto:leandrorito01@gmail.com">leandrorito01@gmail.com</a> or through the <a class="cm-link" href="#contact">contact me</a> form.</p>
+                <p class="pol-width">If any content, including images or service integrations, is believed to violate fair use or intellectual property rights, please contact me at <a class="imp-mail" href="mailto:leandrorito01@gmail.com">leandrorito01@gmail.com</a> or through the <a class="cm-link" href="https://rit.bm-it.ch/#contact">contact me</a> form.</p>
             </div>
         </div>
     </footer>
+    
+    <!-- JS script link -->
     <script src="script.js"></script>
 </body>
 </html>
