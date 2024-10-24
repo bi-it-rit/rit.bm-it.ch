@@ -20,7 +20,6 @@ I’m Leandro, a CS student from Switzerland. I love learning new things about C
 If you have any suggestions or run into issues with my website, I’d love to hear from you! You can reach me here:
 
 - **Email**: leandrorito01@gmail.com
-- **Instagram**: [lxle_icdd](https://www.instagram.com/lxle_icdd/)
 - **Discord**: [lxle](https://discord.com/users/346012902404128769)
 
 ## Thanks for Stopping By!
