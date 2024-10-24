@@ -11,7 +11,7 @@ I’m Leandro, a CS student from Switzerland. I love learning new things about C
 
 ### My Portfolio
 
-- **About**: This is my first ever Project. 
+- **About**: This is my first ever project. 
 - **What it is**: It's a website about me and my interests.
 - **Tech Stack**: I used html, css & javascript for this project. I also used some external services.
 
