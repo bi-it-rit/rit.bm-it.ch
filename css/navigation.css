@@ -1,3 +1,4 @@
+/* Navigation bar styling */
 .nav-bar {
     position: relative;
     border-radius: 8px;
@@ -10,15 +11,17 @@
     z-index: 2;
 }
 
+/* Navigation layout */
 .navigation {
-    flex: 1; /* Allow navigation to take remaining space */
-    display: flex; /* Flexbox for navigation */
-    justify-content: center; /* Center the navigation items */
-    max-width: 100%; /* Limit the maximum width */
-    padding: 5px; /* Add some padding */
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    padding: 5px;
+    flex-wrap: wrap;
 }
 
+/* Navigation link styling */
 .navigation a {
     color: #ededed;
     transition: color 0.3s, font-size 0.3s ease;
@@ -29,46 +32,50 @@
     font-weight: bold;
 }
 
+/* Navigation list styling */
 .navigation ul {
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-    display: flex; /* Flexbox for the list */
-    justify-content: center; /* Center the list items */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
+/* Navigation item styling */
 .navigation li {
-    margin: 0 15px; /* Space between navigation items */
+    margin: 0 15px;
     transition: color 0.3s ease, font-size 0.3s ease;
 }
 
+/* Default link styling */
 .navigation a {
-    text-decoration: none; /* Remove underline */
-    color: #ededed; /* Text color */
-    font-size: 1rem; /* Default font size */
-    transition: color 0.3s ease, font-size 0.3s ease, margin 0.3s ease; /* Transition for hover effect */
+    text-decoration: none;
+    color: #ededed;
+    font-size: 1rem;
+    transition: color 0.3s ease, font-size 0.3s ease, margin 0.3s ease;
 }
 
+/* Link hover effect */
 .navigation a:hover {
-    color: #e56699; /* Change color on hover */
+    color: #e56699;
 }
 
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     .navigation {
-        padding: 5px; /* Reduce padding for smaller screens */
+        padding: 5px;
     }
     
     .navigation a {
-        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
     .navigation li {
-        margin: 0 5px; /* Further reduce space between items */
+        margin: 0 5px;
     }
     .navigation a {
-        font-size: 0.7rem; /* Further adjust font size */
+        font-size: 0.7rem;
     }
 }

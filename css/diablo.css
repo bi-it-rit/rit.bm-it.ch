@@ -1,15 +1,12 @@
+/* Define font */
 @font-face {
   font-family: 'PTSerif';
   src: url('../fonts/PTSerif-Regular.ttf') format('truetype');
   font-weight: 400;
+  font-display: swap; /* Prevent invisible text during font loading */
 }
 
-#playtime {
-  font-size: 18px;
-  color: #555;
-  margin-top: 10px;
-}
-
+/* Reset values */
 * {
   margin: 0;
   padding: 0;
@@ -20,10 +17,12 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Set scrolling behavior */
 html {
   scroll-behavior: smooth;
 }
 
+/* Set standard values */
 body {
   font-family: "PTSerif", sans-serif;
   font-weight: bold;
@@ -34,12 +33,14 @@ body {
   height: 100vh;
 }
 
+/* Keyframe animation for fade-in effect */
 @keyframes fadeIn {
   to {
       opacity: 1;
   }
 }
 
+/* General section styling */
 section {
   width: 75%;
   align-items: center;
@@ -48,120 +49,142 @@ section {
   margin: 0 auto;
 }
 
+/* Set position for main header */
 h1 {
   position: relative;
 }
 
-header {
-  background-color: #1f2122; /* Header background color */
-  width: 100%;
-  margin: 0 auto;
-  position: relative; /* Ensure header is positioned relative to the viewport */
+/* Header (h2) styling */
+h2 {
+  color: #e81e0b;
+  font-size: 32px;
 }
 
+/* Header styles */
+header {
+  background-color: #1f2122;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Style for Diablo fixed header */
 .diablo-header {
-  position: fixed; /* Keep the header fixed */
-  background: #1f2122; /* Background color of the header */
-  color: #d5d6d3; /* Text color */
-  text-align: center; /* Center-align the text */
-  z-index: 10000; /* High z-index for overlaying */
+  position: fixed;
+  background: #1f2122;
+  color: #d5d6d3;
+  text-align: center;
+  z-index: 10000;
   width: 99vw;
   height: 0;
 }
 
+/* Navigation wrapper settings */
 .nav-wrapper {
   background: #1f2122;
   width: 100%;
   height: auto;
-  margin: 0 auto; /* Center the wrapper */
+  margin: 0 auto;
   padding: 15px 0;
 }
 
+/* Navigation settings */
 .navigation {
-  display: inline-block; /* Allows for centering */
+  display: inline-block;
   font-size: 20px;
 }
 
+/* Styling for unordered lists */
 ul {
-  list-style: none; /* Remove default list styles */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
+/* List items for navigation */
 li {
-  display: inline; /* Display list items inline */
-  margin: 0 15px; /* Space between items */
+  display: inline;
+  margin: 0 15px;
 }
 
+/* Link styling in navigation */
 .links {
-  color: #d5d6d3; /* Set link color */
-  text-decoration: none; /* Remove underline */
-  padding: 10px; /* Padding for links */
+  color: #d5d6d3;
+  text-decoration: none;
+  padding: 10px;
 }
 
+/* Hover effect for navigation links */
 .links:hover {
   color: #e81e0b;
 }
 
+/* Styling the navigation bar */
 .nav-bar {
-  position: relative; /* Position relative to the header */
-  border-radius: 8px; /* Rounded corners */
-  width: 75vw; /* Set to 75% for better centering */
-  height: 6px; /* Height of the nav-bar */
+  position: relative;
+  border-radius: 8px;
+  width: 75vw;
+  height: 6px;
   top: -20px;
-  background-color: #27292a; /* Background color of the nav-bar */
-  margin: 20px auto 0; /* Center the nav-bar and add margin from the top */
+  background-color: #27292a;
+  margin: 20px auto 0;
 }
 
+/* Diablo title styling */
 .diablo-title {
-  display: flex; /* Flexbox for title and arrow */
+  display: flex;
   flex-wrap: wrap;
-  align-items: center; /* Center arrow vertically with title */
+  align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 2rem; /* Use relative font size */
-  font-weight: bold; /* Bold font */
-  color: #e81e0b; /* Title color */
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e81e0b;
   transition: font-size 0.3s ease;
 }
 
+/* Diablo review section styling */
 .diablo-review {
   background-color: #1f2122;
 }
 
+/* Diablo container styling */
 .diablo-container {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 90%; /* Responsive width */
-  max-width: 1300px; /* Limit max width */
-  margin: 20px auto; /* Center containers */
-  align-items: center; /* Center align items */
+  width: 90%;
+  max-width: 1300px;
+  margin: 20px auto;
+  align-items: center;
 }
 
+/* Styling for Diablo cards */
 .diablo-card,
 .diablo-card2 {
   position: relative;
   background-color: #27292a;
   border-radius: 8px;
   transition: transform 0.3s, box-shadow 0.3s;
-  width: 75vw; /* Full width for responsiveness */
+  width: 75vw;
   height: auto;
-  padding: 20px; /* Add padding for inner spacing */
+  padding: 20px;
   margin-top: 100px;
-  transition: transform 0.3s, box-shadow 0.3s;
   will-change: transform;
 }
 
+/* Specific margin for second Diablo card */
 .diablo-card2 {
-  margin-bottom: 40px; /* Specific margin for the second card */
+  margin-bottom: 40px;
 }
 
-.diablo-card:hover, .diablo-card2:hover  {
+/* Hover effects for Diablo cards */
+.diablo-card:hover, .diablo-card2:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 20px rgba(232, 30, 11, 0.3);
 }
 
+/* Diablo text section */
 .diablo-text {
   top: 0;
   left: 0;
@@ -176,6 +199,7 @@ li {
   transition: font-size 0.3s ease, line-height 0.3s ease, margin-left 0.3s ease;
 }
 
+/* Spacer styling for Diablo */
 .diablo-spacer {
   font-size: 20px;
   margin: 0 auto;
@@ -184,16 +208,19 @@ li {
   width: 97%;
 }
 
+/* Diablo wrapper settings */
 .diablo-wrapper {
   overflow: visible;
   position: relative;
   height: auto;
 }
 
+/* Disable image selection */
 img {
   user-select: none;
 }
 
+/* Review, open world, and experience section containers */
 .review-container,
 .openworld-container,
 .experience-container {
@@ -204,6 +231,7 @@ img {
   margin-top: 60px;
 }
 
+/* Image styling for review and open world sections */
 .review-img,
 .openworld-img,
 .openworld-img2,
@@ -214,17 +242,20 @@ img {
   height: auto;
 }
 
+/* Text container styling for review and experience sections */
 .review-text-container,
 .experience-container {
   flex: 1;
   text-align: left;
 }
 
+/* Open world text alignment */
 .openworld-text-container {
   flex: 1;
   text-align: right;
 }
 
+/* Review and experience title styling */
 .review-title,
 .experience-title {
   color: #e81e0b;
@@ -238,6 +269,7 @@ img {
   animation: colorChange 40s linear infinite;
 }
 
+/* Open world title styling */
 .openworld-title {
   color: #e81e0b;
   flex: 2;
@@ -250,6 +282,7 @@ img {
   animation: colorChange 40s linear infinite;
 }
 
+/* Text styling for review, open world, and experience sections */
 .review-text,
 .openworld-text,
 .experience-text {
@@ -257,6 +290,7 @@ img {
   margin-top: 20px;
 }
 
+/* Footer styling */
 footer {
   background: #1f2122;
   color: #d5d6d3;
@@ -267,6 +301,7 @@ footer {
   transition: font-size 0.3s ease;
 }
 
+/* Footer bar styling */
 .footer-bar {
   position: absolute;
   top: 0;
@@ -278,6 +313,7 @@ footer {
   background-color: #27292a;
 }
 
+/* Footer container settings */
 .footer-container {
   display: flex;
   flex-direction: column;
@@ -285,94 +321,107 @@ footer {
   z-index: 1000;
 }
 
+/* Footer content styling */
 .footer-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center content vertically */
+  justify-content: center;
   width: 100%;
   max-width: 1200px;
-  padding: 10px; /* Added padding for better spacing */
+  padding: 10px;
   transition: font-size 0.3s ease;
 }
 
+/* Footer paragraph styling */
 .footer-content p {
   margin: 0;
   text-align: center;
 }
 
+/* Social media icon styling */
 .socials {
-  display: flex; /* Use flexbox for better alignment */
+  display: flex;
   justify-content: center;
-  max-width: 300px; /* Slightly wider for social icons */
-  margin-top: 10px; /* Consistent spacing above */
+  max-width: 300px;
+  margin-top: 10px;
 }
 
+/* Individual social media link styling */
 .socials a {
   color: #d5d6d3;
-  margin: 0 15px; /* Increased margin for better spacing */
+  margin: 0 15px;
   font-size: 1.5rem;
   transition: color 0.3s;
 }
 
+/* Hover effect for social links */
 .socials a:hover {
   color: #e81e0b;
 }
 
+/* Styling for footer rights section */
 .imp-rights {
-  margin: 10px 0; /* Vertical spacing */
+  margin: 10px 0;
 }
 
+/* Footer tabs styling */
 .footer-tabs {
   display: flex;
-  justify-content: center; /* Center tabs horizontally */
-  flex-wrap: wrap; /* Allow wrapping on small screens */
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
+/* Impressum and policy links styling */
 .impressum a,
 .policy a {
   text-decoration: none;
   cursor: pointer;
-  max-width: 150px; /* Consistent max width for all */
-  margin: 5px 10px; /* Add horizontal and vertical spacing */
-  transition: color 0.3s, transform 0.2s; /* Added transform effect */
+  max-width: 150px;
+  margin: 5px 10px;
+  transition: color 0.3s, transform 0.2s;
   color: #d5d6d3;
 }
 
+/* Hover effect for impressum and policy links */
 .impressum a:hover,
 .policy a:hover {
   color: #e81e0b;
 }
 
+/* Email styling */
 .imp-mail {
   color: inherit;
   text-decoration: none;
 }
 
+/* Hover effect for email link */
 .imp-mail:hover {
   color: #e81e0b;
 }
 
+/* Modal container styling */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1000; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1000;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
 }
 
+/* Modal content styling */
 .modal-content {
   background-color: #27292a;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
   padding: 20px;
-  width: 80%; /* Could be more or less, depending on screen size */
-  max-width: 600px; /* Max width for larger screens */
-  position: relative; /* For positioning the close button */
-  border-radius: 5px; /* Optional: round corners */
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  border-radius: 5px;
   line-height: 2;
   text-align: left;
   transition: transform 0.3s ease;
@@ -383,9 +432,10 @@ footer {
 }
 
 .modal-content:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
+  transform: translateY(-5px);
 }
 
+/* Close button styling */
 .close {
   color: #aaa;
   float: right;
@@ -400,78 +450,89 @@ footer {
   cursor: pointer;
 }
 
+/* Modal content variations */
 .modal-content.policy-content {
-  max-width: 900px; /* Adjust max width for policy */
+  max-width: 900px;
 }
 
 .modal-content.impressum-content {
-  max-width: 450px; /* Adjust max width for impressum */
+  max-width: 450px;
 }
 
+/* Custom link styling */
 .cm-link {
   text-decoration: none;
-  color: inherit; /* Inherit text color */
+  color: inherit;
 }
 
 .cm-link:hover {
-  text-decoration: underline; /* Underline on hover */
-  color: #e81e0b; /* Change color on hover */
+  text-decoration: underline;
+  color: #e81e0b;
 }
 
+/* Banner container styling */
 .banner-container {
   display: flex;
-  flex-direction: column; /* Stack the text above the image */
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  height: auto; /* Full viewport height, adjust as necessary */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
   margin-top: 80px;
 }
 
+/* Banner text styling */
 .banner-text {
-  text-align: center; /* Center the text inside */
-  margin-bottom: 20px; /* Add some space between text and image */
+  text-align: center;
+  margin-bottom: 20px;
   margin-top: 40px;
   animation: upDown 4s ease-in-out infinite;
 }
 
+/* Banner image styling */
 .diablo-banner {
-  width: 50%; /* Example width, adjust as necessary */
-  height: auto; /* Example height, adjust as necessary */
+  width: 50%;
+  height: auto;
   opacity: 0;
+  cursor: pointer;
   animation: fadeInText 2s ease-out forwards;
 }
 
+/* Banner title styling */
 .banner-title {
   font-size: 48px;
   color: #d40000;
   opacity: 0;
   text-decoration: none;
-  text-shadow: 0 0 20px rgba(255, 0, 0, 0.7), 0 0 40px rgba(255, 0, 0, 0.5); /* Glowing red shadow */
+  text-shadow: 0 0 20px rgba(255, 0, 0, 0.7), 0 0 40px rgba(255, 0, 0, 0.5);
   animation: fadeInText 2s ease-out forwards, glowEffect 1.5s infinite alternate;
 }
 
+/* Title sequence styling */
 .title-sequence {
-  color: #d40000; /* Dark red, blood-like color */
-  font-size: 48px; /* Large title size */
+  color: #d40000;
+  font-size: 48px;
   text-align: center;
-  opacity: 0; /* Start fully transparent */
+  opacity: 0;
   text-decoration: none;
-  text-shadow: 0 0 20px rgba(255, 0, 0, 0.7), 0 0 40px rgba(255, 0, 0, 0.5); /* Glowing red shadow */
+  text-shadow: 0 0 20px rgba(255, 0, 0, 0.7), 0 0 40px rgba(255, 0, 0, 0.5);
   animation: fadeInText 2s ease-out forwards, glowEffect 1.5s infinite alternate;
 }
 
+/* Underline title */
 .title-sequence:hover {
   text-decoration: underline;
 }
 
+/* Experience section container styling */
 .experience-container {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   align-items: center;
   margin: 20px;
   margin-top: 60px;
 }
 
+/* Experience section image styling */
 .experience-img {
   flex: 2;
   max-width: 35%;
@@ -479,12 +540,14 @@ footer {
   height: auto;
 }
 
+/* Experience section text container styling */
 .experience-text-container {
   flex: 1;
   margin-left: 20px;
   text-align: left;
 }
 
+/* Experience title styling */
 .experience-title {
   color: #e81e0b;
   flex: 2;
@@ -498,45 +561,42 @@ footer {
   animation: colorChange 40s linear infinite;
 }
 
+/* Experience section text styling */
 .experience-text {
   margin: 0 40px;
   margin-top: 20px;
   text-align: left;
 }
 
-h2 {
-  color: #e81e0b;
-  font-size: 32px;
-}
-
+/* Media queries for max-width: 1200px */
 @media (max-width: 1200px) {
   .diablo-title {
-      font-size: 1.8rem; /* Decrease title font size on smaller screens */
+      font-size: 1.8rem;
   }
 
   .diablo-card,
   .diablo-card2 {
-      width: 90vw; /* Adjust width to be more fluid */
+      width: 90vw;
   }
 
   .review-img,
   .openworld-img,
   .openworld-img2,
   .experience-img {
-      max-width: 100%; /* Full width for images on smaller devices */
-      margin-bottom: 20px; /* Space below images */
+      max-width: 100%;
+      margin-bottom: 20px;
   }
 
   .review-title,
   .openworld-title,
   .experience-title {
-      font-size: 24px; /* Smaller titles for mobile */
-      margin-left: 20px; /* Adjust left margin */
+      font-size: 24px;
+      margin-left: 20px;
   }
 
   .footer-tabs {
-      flex-direction: column; /* Stack tabs vertically */
-      align-items: center; /* Center tabs on smaller screens */
+      flex-direction: column;
+      align-items: center;
   }
 
   .diablo-banner {
@@ -544,37 +604,38 @@ h2 {
   }
 }
 
+/* Media queries for max-width: 1024px */
 @media (max-width: 1024px) {
   .openworld-container {
-      flex-direction: column; /* Stack items vertically */
-      align-items: center; /* Center items horizontally */
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      text-align: center; /* Center text content */
-      margin: 20px 0; /* Adjust spacing */
+      text-align: center;
+      margin: 20px 0;
   }
 
   .review-img,
   .openworld-img,
   .openworld-img2,
   .experience-img {
-      width: 70%; /* Reduce image width to 70% */
-      margin-bottom: 20px; /* Space below each image */
+      width: 70%;
+      margin-bottom: 20px;
   }
 
   .review-text-container,
   .openworld-text-container,
   .experience-text-container {
-      max-width: 90%; /* Set max width of text container */
-      margin-left: 0; /* No left margin */
-      text-align: center; /* Center-align the text */
-      margin-bottom: 20px; /* Add space between text and next image */
+      max-width: 90%;
+      margin-left: 0;
+      text-align: center;
+      margin-bottom: 20px;
   }
 
   .review-title,
   .openworld-title,
   .experience-title {
-      font-size: 26px; /* Adjust the title size */
-      margin-bottom: 10px; /* Space below title */
+      font-size: 26px;
+      margin-bottom: 10px;
       margin-left: 0;
       margin-right: 0;
       text-align: center;
@@ -584,13 +645,7 @@ h2 {
     text-align: center;
   }
 
-  .review-container {
-    display: flex;
-    flex-direction: column-reverse;
-    flex-wrap: wrap-reverse;
-    margin-bottom: 40px;
-  }
-
+  .review-container,
   .experience-container {
     display: flex;
     flex-direction: column-reverse;
@@ -611,47 +666,43 @@ h2 {
       width: 1024px;
   }
 
-  .diablo-text {
-      text-align: center; /* Center all text elements */
-      margin-bottom: 0;
-  }
-
+  .diablo-text,
   h1, h2 {
-      text-align: center; /* Center headings */
+      text-align: center;
   }
 
   h1 {
-      font-size: 28px; /* Adjust h1 size for smaller screens */
-      margin-bottom: 20px; /* Add space below */
+      font-size: 28px;
+      margin-bottom: 20px;
   }
 
   h2 {
-      font-size: 24px; /* Adjust h2 size for smaller screens */
-      margin-bottom: 20px; /* Add space below */
+      font-size: 24px;
+      margin-bottom: 20px;
   }
 
   .diablo-banner {
     width: 70%;
   }
-
 }
 
+/* Media queries for max-width: 800px */
 @media (max-width: 800px) {
   .diablo-title {
-      font-size: 1.6rem; /* Further reduce title font size */
+      font-size: 1.6rem;
   }
 
   h1 {
-      font-size: 1.8rem; /* Decrease header font size */
+      font-size: 1.8rem;
   }
 
   .nav-wrapper {
     width: 100%;
-      padding: 10px 0; /* Reduced padding */
+    padding: 10px 0;
   }
 
   .diablo-text {
-      font-size: 28px; /* Smaller text on mobile */
+      font-size: 28px;
   }
 
   .diablo-banner {
@@ -660,8 +711,8 @@ h2 {
 
   .review-title,
   .openworld-title {
-      font-size: 24px; /* Further reduce title font size */
-      margin-left: 10px; /* Adjust margin for titles */
+      font-size: 24px;
+      margin-left: 10px;
       text-align: center;
       margin-right: 0;
       margin-left: 0;
@@ -686,31 +737,32 @@ h2 {
   }
 
   .footer-content {
-      padding: 5px; /* Reduced padding for footer */
+      padding: 5px;
   }
 
   .socials a {
-      font-size: 1.2rem; /* Smaller social icons */
+      font-size: 1.2rem;
   }
 }
 
+/* Media queries for max-width: 600px */
 @media (max-width: 600px) {
   .diablo-title {
-      font-size: 1.4rem; /* Smallest title font size */
+      font-size: 1.4rem;
   }
 
   .diablo-card,
   .diablo-card2 {
-      width: 95vw; /* Adjust for small screens */
+      width: 95vw;
   }
 
   h1 {
-      font-size: 1.5rem; /* Smallest header font size */
+      font-size: 1.5rem;
   }
 
   .review-title,
   .openworld-title {
-      font-size: 24px; /* Smallest titles */
+      font-size: 24px;
   }
 
   .review-text,
@@ -732,14 +784,15 @@ h2 {
   }
 }
 
+/* Media queries for max-width: 425px */
 @media (max-width: 425px) {
   .diablo-title {
-      font-size: 1.4rem; /* Smallest title font size */
+      font-size: 1.4rem;
   }
 
   .diablo-card,
   .diablo-card2 {
-      width: 95vw; /* Adjust for small screens */
+      width: 95vw;
   }
 
   .diablo-spacer {
@@ -747,12 +800,12 @@ h2 {
   }
 
   h1 {
-      font-size: 1.5rem; /* Smallest header font size */
+      font-size: 1.5rem;
   }
 
   .review-title,
   .openworld-title {
-      font-size: 24px; /* Smallest titles */
+      font-size: 24px;
   }
 
   .review-text,
@@ -790,20 +843,21 @@ h2 {
   .review-img {
     margin-bottom: 20px;
   }
-  
+
   .diablo-banner {
     width: 100%;
   }
 }
 
+/* Media queries for max-width: 325px */
 @media (max-width: 325px) {
   .diablo-title {
-      font-size: 1.4rem; /* Smallest title font size */
+      font-size: 1.4rem;
   }
 
   .diablo-card,
   .diablo-card2 {
-      width: 95vw; /* Adjust for small screens */
+      width: 95vw;
   }
 
   .diablo-spacer {
@@ -811,12 +865,12 @@ h2 {
   }
 
   h1 {
-      font-size: 1.5rem; /* Smallest header font size */
+      font-size: 1.5rem;
   }
 
   .review-title,
   .openworld-title {
-      font-size: 24px; /* Smallest titles */
+      font-size: 24px;
   }
 
   .review-text,
@@ -856,10 +910,11 @@ h2 {
   }
 }
 
+/* Keyframes for fading in text */
 @keyframes fadeInText {
   0% {
       opacity: 0;
-      transform: translateY(20px); /* Slight downward movement */
+      transform: translateY(20px);
   }
   50% {
       opacity: 0.5;
@@ -871,7 +926,7 @@ h2 {
   }
 }
 
-/* Glow effect to add intensity */
+/* Keyframes for glow effect */
 @keyframes glowEffect {
   0% {
       text-shadow: 0 0 10px rgba(255, 0, 0, 0.4), 0 0 20px rgba(255, 0, 0, 0.3);
@@ -881,16 +936,17 @@ h2 {
   }
 }
 
-/* Optional: slow pulse effect to make the title more dynamic */
+/* Keyframes for pulse effect */
 @keyframes pulseEffect {
   0% {
       transform: scale(1);
   }
   100% {
-      transform: scale(1.02); /* Slightly increase size for pulse */
+      transform: scale(1.02);
   }
 }
 
+/* Keyframes for fading in container */
 @keyframes fadeInContainer {
   0% {
       opacity: 0;
@@ -900,31 +956,37 @@ h2 {
   }
 }
 
+/* Keyframes for up-down motion */
 @keyframes upDown {
   0% {
-      transform: translateY(0); /* Start at initial position */
+      transform: translateY(0);
   }
   50% {
-      transform: translateY(-20px); /* Move 20px up at the halfway point */
+      transform: translateY(-20px);
   }
   100% {
-      transform: translateY(0); /* Return to the original position */
+      transform: translateY(0);
   }
 }
 
+/* Keyframes for color change */
 @keyframes colorChange {
-  0% { background-position: 0%; }
-  100% { background-position: 100%; }
+  0% {
+      background-position: 0%;
+  }
+  100% {
+      background-position: 100%;
+  }
 }
 
+/* Keyframes for fading in subtitle */
 @keyframes fadeInSubtitle {
   0% {
       opacity: 0;
-      transform: translateY(10px); /* Subtitle moves up as it fades in */
+      transform: translateY(10px);
   }
   100% {
       opacity: 1;
       transform: translateY(0);
   }
 }
-

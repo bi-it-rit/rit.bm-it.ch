@@ -1,7 +1,8 @@
+/* Section styling */
 section {
     position: relative;
     z-index: 9;
-    padding: 10px 20px; /* Add horizontal padding for small screens */
+    padding: 10px 20px;
     animation: fadeIn 1s ease forwards;
     overflow: visible;
     margin: 0 auto;
@@ -9,44 +10,45 @@ section {
     transition: padding 0.3s ease, font-size 0.3s ease;
 }
 
-/* Common styles for sections with specific backgrounds */
+/* Common styles for specific sections */
 #about, #about2, #gaming, #programming, #music, #contact {
     position: relative;
     text-align: center;
-    background: #1f2122; /* Default background color */
+    background: #1f2122;
     z-index: 998;
-    color: #ededed; /* Default text color */
-    padding: 60px 0; /* Consistent padding for sections */
+    color: #ededed;
+    padding: 60px 0;
 }
 
-/* Specific section colors */
+/* Specific section background colors */
 .gaming-section,
 .programming-section,
 .music-section {
-    background-color: #1f2122; /* Ensure all have the same background */
+    background-color: #1f2122;
 }
 
+/* Responsive adjustments for larger screens */
 @media (max-width: 1920px) {
     #gaming,
     #programming,
     #music {
-        padding: 20px 10px; /* Adjust padding for specific sections */
+        padding: 20px 10px;
     }
 
     #about, #about2 {
-        padding: 20px 10px; /* Keep padding for #about and #about2 */
+        padding: 20px 10px;
     }
 }
 
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     section {
-        padding: 20px 10px; /* Reduce padding on smaller screens */
+        padding: 20px 10px;
     }
 
     .spacer {
         font-size: 14px;
-      }
+    }
 
     h4 {
         font-size: 26px;
@@ -69,10 +71,9 @@ section {
     }
 }
 
-  
 @media (max-width: 480px) {
     .spacer {
-      font-size: 12px;
+        font-size: 12px;
     }
 
     h4 {
@@ -94,5 +95,4 @@ section {
     .policy {
         font-size: 12px;
     }
-  }
-  
+}

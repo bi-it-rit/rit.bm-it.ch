@@ -1,23 +1,31 @@
+/* Font definition */
 @font-face {
   font-family: 'Poppins';
   src: url('../fonts/Poppins-Regular.ttf') format('truetype');
   font-weight: 400;
+  font-display: swap; /* Prevent invisible text during font loading */
 }
 
+/* Global reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Hide horizontal overflow */
 html, body {
   overflow-x: hidden;
 }
 
+/* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
+  text-align: center;
+  justify-content: center;
 }
 
+/* Body styling */
 body {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
@@ -28,12 +36,14 @@ body {
   overflow-x: hidden;
 }
 
+/* Fade in animation */
 @keyframes fadeIn {
   to {
       opacity: 1;
   }
 }
 
+/* Initial state for fade-in elements */
 .fade-in {
   width: 100%;
   padding: 20px;
@@ -46,6 +56,7 @@ body {
   opacity: 0.1;
 }
 
+/* Main page content layout */
 .page-content {
   display: flex;
   flex-direction: column;
@@ -54,27 +65,31 @@ body {
   margin: 0 auto;
 }
 
+/* Spacer for layout */
 .spacer {
+  margin: 0 auto;
   word-spacing: 2px;
   padding-top: 20px;
   width: 97%;
 }
 
+/* About container styling */
 .about-container,
 .about-container2,
 .about-container3 {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 90%; /* Responsive width */
-  max-width: 1300px; /* Limit max width */
-  margin: 20px auto; /* Center containers */
-  align-items: center; /* Center align items */
+  width: 90%;
+  max-width: 1300px;
+  margin: 20px auto; 
+  align-items: center;
 }
 
+/* Icon styling */
 .icons {
   align-items: center;
-  max-width: 50px; /* Increase width for better touch targets */
+  max-width: 50px;
   user-select: none;
 }
 
@@ -82,7 +97,7 @@ body {
   margin: 10px 0;
 }
 
-
+/* About card styling */
 .about-card2,
 .about-card3,
 .about-card4,
@@ -91,10 +106,10 @@ body {
   background-color: #27292a;
   border-radius: 24px;
   transition: transform 0.3s, box-shadow 0.3s;
-  width: 100%; /* Full width for responsiveness */
-  max-width: 1300px; /* Max width for cards */
-  margin-top: 20px; /* Corrected typo from 20x to 20px */
-  padding: 20px; /* Add padding for inner spacing */
+  width: 100%;
+  max-width: 1300px;
+  margin-top: 20px;
+  padding: 20px;
 }
 
 .about-card {
@@ -102,21 +117,23 @@ body {
   background-color: #27292a;
   border-radius: 24px;
   transition: transform 0.3s, box-shadow 0.3s;
-  width: 100%; /* Full width for responsiveness */
-  max-width: 1300px; /* Max width for cards */
-  padding: 20px; /* Add padding for inner spacing */
+  width: 100%;
+  max-width: 1300px;
+  padding: 20px;
   margin-top: 130px;
 }
 
+/* Image styling within about card */
 .about-card img {
-  display: block; /* Change to block for better layout */
+  display: block;
   border-radius: 8px;
-  width: 95%; /* Full width for images */
+  width: 95%;
   height: auto;
   margin: 0 auto;
   user-select: none;
 }
 
+/* Hover effects for about cards */
 .about-card:hover,
 .about-card2:hover,
 .about-card3:hover,
@@ -126,6 +143,7 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Container styling */
 .container,
 .container2 {
   display: flex;
@@ -135,6 +153,7 @@ body {
   padding-top: 20px;
 }
 
+/* About title styling */
 .about-title {
   position: absolute;
   font-size: 1rem;
@@ -145,64 +164,72 @@ body {
   transition: font-size 0.3s ease;
 }
 
+/* About text styling */
 .about-text {
-  position: absolute; /* Absolute positioning for text overlay */
-  top: 0; /* Align to the top */
-  left: 0; /* Align to the left */
-  padding: 20px; /* Add some padding for spacing */
-  color: #ededed; /* Make the text visible */
-  font-size: 2rem; /* Adjust font size */
-  line-height: 1.6; /* Adjust line height */
-  display: flex; /* Use flexbox to vertically align */
-  flex-direction: column; /* Arrange text in column */
-  justify-content: center; /* Center text vertically */
-  height: 100%; /* Full height to match the image */
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  color: #ededed;
+  font-size: 2rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; 
   text-align: left;
   margin-left: 25px;
   transition: font-size 0.3s ease, line-height 0.3s ease, margin-left 0.3s ease;
 }
 
+/* About content layout */
 .about-content {
   display: flex;
-  align-items: flex-start; /* Align items to the top */
+  align-items: flex-start;
   width: 100%;
 }
 
+/* Icon container styling */
 .icons {
   display: flex;
-  flex-direction: column; /* Stack the icons vertically */
-  margin-right: 20px; /* Space between icons and text */
+  flex-direction: column;
+  margin-right: 20px;
 }
 
+/* Icon image styling */
 .icons img {
-  margin-bottom: 15px; /* Space between icons */
-  width: 50px; /* Set a specific width for the icons */
-  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 15px;
+  width: 50px;
+  height: auto; 
 }
 
+/* Text section layout */
 .about-text2 {
-  flex: 1; /* Allow the text to take the remaining space */
+  flex: 1;
 }
 
+/* Text section styling */
 .text-section {
   display: flex;
-  flex-direction: column; /* Stack icon above text */
-  align-items: center; /* Center the items horizontally */
-  margin-bottom: 20px; /* Space between text sections */
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
+/* Icon wrapper layout */
 .icon-wrapper {
   display: flex;
-  flex-direction: column; /* Stack icon and text vertically */
-  align-items: center; /* Center icon and text */
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Icon wrapper image styling */
 .icon-wrapper img {
-  margin-bottom: 10px; /* Space between icon and text */
-  width: 50px; /* Set a specific width for the icons */
-  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px;
+  height: auto;
 }
 
+/* Heading styling */
 h4 {
   color: #e56699;
   font-size: 32px;
@@ -213,6 +240,59 @@ h2 {
   font-size: 32px;
 }
 
+/* Image container styling */
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+/* Image styling */
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  background: #e56699;
+  color: #ededed;
+  font-size: 18px;
+  padding: 15px 30px;
+  text-decoration: none;
+  user-select: none;
+  margin: 20px auto;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Button hover effect */
+.btn:hover {
+  background: #ededed;
+  color: #e56699;
+}
+
+/* Extra galleries toggle styling */
+.extra-galleries {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.extra-galleries.open {
+  max-height: 1000px;
+}
+
+.extra-galleries.open ~ .btn {
+  margin-top: 20px;
+}
+
+/* Media query for tablet responsiveness */
 @media (max-width: 768px) {
   .about-text {
     font-size: 1.5rem;
@@ -225,15 +305,16 @@ h2 {
   }
 
   .about-content {
-    flex-direction: column; /* Stack icons and text vertically on smaller screens */
-    align-items: center; /* Center items on smaller screens */
+    flex-direction: column;
+    align-items: center;
   }
 
   .text-section {
-    align-items: center; /* Center items */
+    align-items: center;
   }
 }
 
+/* Media query for mobile responsiveness */
 @media (max-width: 480px) {
   .about-card {
     width: 80%;
@@ -250,79 +331,34 @@ h2 {
   }
 }
 
-.image-container {
-  position: relative; /* Set relative position to allow absolute positioning of the text */
-  width: 100%;
-  max-width: 1200px; /* Adjust as needed */
-  overflow: hidden; /* Hide any overflow */
-}
 
-.image {
-  width: 100%; /* Ensure the image is responsive */
-  height: auto; /* Keep aspect ratio */
-  display: block;
-}
 
-.btn {
-  display: inline-block;
-  border: none;
-  cursor: pointer;
-  border-radius: 50px;
-  background: #e56699;
-  color: #ededed;
-  font-size: 18px;
-  padding: 15px 30px;
-  text-decoration: none;
-  user-select: none;
-  margin: 20px auto; /* Center the button */
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.btn:hover {
-  background: #ededed;
-  color: #e56699;
-}
-
-.extra-galleries {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease, padding 0.5s ease;
-}
-
-.extra-galleries.open {
-  max-height: 1000px;
-}
-
-.extra-galleries.open ~ .btn {
-  margin-top: 20px;
-}
-
-/* Responsive Design for Mobile */
+/* Responsive Design */
 @media (max-width: 1920px) {
   .page-content {
       width: 100%;
-      padding: 0 15px; /* Adjust padding for mobile */
+      padding: 0 15px;
   }
 
   .about-container,
   .about-container2 {
-      width: 90%; /* Wider on mobile */
+      width: 90%;
   }
 
   .about-container3 {
-      width: 100%; /* Full width */
+      width: 100%;
   }
 
   .icons {
-      max-width: 30px; /* Adjust icon width */
+      max-width: 30px;
   }
 
   .about-card {
-      width: 100%; /* Full width on mobile */
+      width: 100%;
   }
 
   .btn {
-      font-size: 16px; /* Adjust button font size */
-      padding: 10px 20px; /* Adjust button padding */
+      font-size: 16px;
+      padding: 10px 20px;
   }
 }

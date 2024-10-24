@@ -1,54 +1,61 @@
+/* Form container styling */
 form {
-    max-width: 500px; /* Keep this as a standard width */
-    margin: auto; /* Center the form on the page */
+    max-width: 500px;
+    margin: auto;
 }
 
+/* Label styling inside the form */
 form label {
     display: block;
-    margin: 25px 0 5px; /* Spacing between label and input */
-    font-weight: bold; /* Bold for better visibility */
-    color: #ededed; /* Ensure label text is legible */
+    margin: 25px 0 5px;
+    font-weight: bold;
+    color: #ededed;
 }
 
+/* Input and textarea fields styling */
 form input,
 form textarea {
     width: 100%;
-    padding: 12px; /* Increase padding for a better touch target */
+    padding: 12px;
     margin-bottom: 20px;
     border-radius: 4px;
     border: 1px solid #ccc;
-    transition: border-color 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
-    background-color: #1f2122; /* Match background color */
-    color: #D3D3D3; /* Set text color for input fields */
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #1f2122;
+    color: #D3D3D3;
 }
 
+/* Focused state for inputs and textareas */
 form input:focus,
 form textarea:focus {
-    border-color: #d96699; /* Highlight border on focus */
+    border-color: #d96699;
     outline: none;
-    box-shadow: 0 0 5px rgba(217, 102, 153, 0.5); /* Subtle shadow on focus */
+    box-shadow: 0 0 5px rgba(217, 102, 153, 0.5);
 }
 
+/* Button styling inside the form */
 form button {
     display: inline-block;
-    background: #d96699; /* Button background color */
-    color: #ededed; /* Button text color */
-    padding: 12px 20px; /* Increase padding for better usability */
+    background: #d96699;
+    color: #ededed;
+    padding: 12px 20px;
     margin-top: 30px;
     font-size: 1rem;
     border: none;
-    border-radius: 50px; /* Rounded button */
+    border-radius: 50px;
     cursor: pointer;
     font-weight: bold;
-    transition: background 0.3s, color 0.3s, transform 0.2s; /* Transition effects */
+    transition: background 0.3s, color 0.3s, transform 0.2s;
     user-select: none;
 }
 
+/* Hover effect for buttons */
 form button:hover {
-    background: #ededed; /* Button hover background */
-    color: #d96699; /* Button hover text color */
+    background: #ededed;
+    color: #d96699;
 }
 
+/* Heading styling */
 h5 {
     font-size: 32px;
     color: #e56699;
@@ -56,101 +63,110 @@ h5 {
     margin-top: 15px;
 }
 
+/* Form container layout */
 .form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
 }
 
+/* Form card styling */
 .form-card {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    padding: 20px; /* Added padding for inner content */
+    padding: 20px;
     position: relative;
-    border-radius: 24px; /* Maintain rounded corners */
-    background-color: #27292a; /* Card background color */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transition effects */
+    border-radius: 24px;
+    background-color: #27292a;
+    transition: transform 0.3s, box-shadow 0.3s;
     width: 600px;
     height: 510px;
 }
 
+/* Hover effect for form card */
 .form-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Styling for form areas and message input */
 .form-area,
 .form-area2,
 .msg-input {
-    border: 2px solid #333; /* Consistent border color */
-    padding: 12px; /* Increased padding */
+    border: 2px solid #333;
+    padding: 12px;
     min-height: 40px;
-    width: calc(100% - 24px); /* Full width minus padding */
-    border-radius: 4px; /* Consistent border radius */
-    font-size: 14px; /* Consistent font size */
+    width: calc(100% - 24px);
+    border-radius: 4px;
+    font-size: 14px;
     outline: none;
     margin: 0 auto;
-    background-color: #1f2122; /* Match input background */
-    color: #D3D3D3; /* Text color */
-    transition: background 0.3s; /* Background transition */
+    background-color: #1f2122;
+    color: #D3D3D3;
+    transition: background 0.3s;
 }
 
+/* Filled state for form areas */
 .form-area.filled,
 .form-area2.filled,
 .msg-input.filled {
-    background-color: #1f2122; /* Keep background consistent when filled */
-    color: #ededed; /* Keep text color consistent when filled */
+    background-color: #1f2122;
+    color: #ededed;
 }
 
+/* Focused state for form areas */
 .form-area:focus,
 .form-area2:focus,
 .msg-input:focus {
-    border-color: #d96699; /* Highlight border on focus */
+    border-color: #d96699;
 }
 
+/* Input field specific styling */
 input {
-    background-color: #1f2122; /* Match input background */
-    color: #ededed; /* Text color */
+    background-color: #1f2122;
+    color: #ededed;
     width: 100%;
-    overflow-x: auto; /* Allow horizontal scrolling */
-    white-space: nowrap; /* Prevent line breaks */
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
+/* Placeholder text styling */
 input::placeholder {
-    font-family: 'Poppins', sans-serif; /* Ensure font is used */
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    opacity: 0.5; /* Placeholder visibility */
+    opacity: 0.5;
     transition: opacity 0.2s linear;
 }
 
+/* Focused state for placeholder */
 input:focus::placeholder {
-    opacity: 0.7; /* Change opacity on focus */
+    opacity: 0.7;
 }
 
+/* Media query for large screens */
 @media (max-width: 1300px) {
     .form-card {
         width: 46vw;
     }
 }
 
-
-/* Responsive Media Queries */
+/* Media query for responsive layout */
 @media (max-width: 768px) {
     form {
-        padding: 0 20px; /* Add padding on smaller screens */
+        padding: 0 20px;
     }
 
     .form-card {
-        width: calc(100% - 40px); /* Adjust width for smaller screens */
+        width: calc(100% - 40px);
     }
 
     .form-area,
     .form-area2,
     .msg-input {
-        width: calc(100% - 24px); /* Ensure full width */
+        width: calc(100% - 24px);
         min-width: 150px;
     }
 

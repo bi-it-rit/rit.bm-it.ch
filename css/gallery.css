@@ -1,3 +1,4 @@
+/* General gallery styling for various gallery types */
 .gallery,
 .gallery2,
 .gallery3,
@@ -5,48 +6,52 @@
 .gallery-music {
     position: relative;
     z-index: 10;
-    width: 100%; /* Use 100% for responsiveness */
-    max-width: 1550px; /* Limit maximum width */
+    width: 100%;
+    max-width: 1550px;
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap */
-    align-items: center; /* Center items vertically */
+    flex-wrap: wrap;
+    align-items: center;
     padding: 0;
-    margin: 40px auto; /* Center the galleries with margin */
+    margin: 40px auto;
     user-select: none;
     transition: transform 0.5s ease;
     justify-content: center;
 }
 
+/* Anchor tag styling inside galleries */
 .gallery a,
 .gallery2 a,
 .gallery3 a,
 .gallery-programming a,
 .gallery-music a {
     flex-shrink: 0;
-    width: calc(33.33% - 60px); /* Adjust width for spacing between items */
-    margin: 30px; /* Margin around each item */
+    width: calc(33.33% - 60px);
+    margin: 30px;
     margin-bottom: -30px;
     text-align: center;
     display: inline-block;
     position: relative;
 }
 
+/* Specific margin adjustment for gallery2 */
 .gallery2 {
     margin-top: 0;
 }
 
+/* Image styling within galleries */
 .gallery img,
 .gallery2 img,
 .gallery3 img,
 .gallery-programming img,
 .gallery-music img {
-    width: 100%; /* Changed to 100% for proper scaling */
+    width: 100%;
     border-radius: 8px;
     transition: transform 0.3s, box-shadow 0.3s, z-index 0.3s;
     object-fit: cover;
     z-index: 1;
 }
 
+/* Hover effect on gallery images */
 .gallery img:hover,
 .gallery2 img:hover,
 .gallery3 img:hover,
@@ -57,20 +62,21 @@
     z-index: 1120;
 }
 
+/* Wrapper for galleries */
 .gallery-wrapper {
     overflow: visible;
     position: relative;
-    height: auto; /* Allow height to adjust */
+    height: auto;
 }
 
-/* Responsive Design for Mobile */
+/* Responsive styling for mobile screens (max width: 768px) */
 @media (max-width: 768px) {
     .gallery a,
     .gallery2 a,
     .gallery3 a,
     .gallery-programming a,
     .gallery-music a {
-        width: calc(50% - 40px); /* Two items per row on smaller screens */
+        width: calc(50% - 40px);
     }
 
     .gallery,
@@ -80,12 +86,13 @@
     }
 }
 
+/* Responsive styling for extra small screens (max width: 480px) */
 @media (max-width: 480px) {
     .gallery a,
     .gallery2 a,
     .gallery3 a,
     .gallery-programming a,
     .gallery-music a {
-        width: calc(100% - 30px); /* One item per row on extra small screens */
+        width: calc(100% - 30px);
     }
 }
