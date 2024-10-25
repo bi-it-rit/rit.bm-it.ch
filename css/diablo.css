@@ -567,6 +567,8 @@ footer {
   text-align: left;
 }
 
+/* -----------------------------Responsive Design----------------------------- */
+
 /* Media queries for max-width: 1200px */
 @media (max-width: 1200px) {
   .diablo-title {

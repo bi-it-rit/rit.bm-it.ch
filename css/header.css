@@ -30,6 +30,8 @@
     transition: font-size 0.3s ease; 
 }
 
+/* -----------------------------Responsive Design----------------------------- */
+
 /* Media query for responsive adjustments */
 @media (max-width: 768px) {
     .title {

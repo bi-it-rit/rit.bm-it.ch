@@ -69,6 +69,8 @@
     height: auto;
 }
 
+/* -----------------------------Responsive Design----------------------------- */
+
 /* Responsive styling for mobile screens (max width: 768px) */
 @media (max-width: 768px) {
     .gallery a,

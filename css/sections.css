@@ -27,6 +27,8 @@ section {
     background-color: #1f2122;
 }
 
+/* -----------------------------Responsive Design----------------------------- */
+
 /* Responsive adjustments for larger screens */
 @media (max-width: 1920px) {
     #gaming,

@@ -259,7 +259,6 @@ messageInput.addEventListener('input', () => {
 });
 
 // script.js (JavaScript for Modals)
-
 document.addEventListener('DOMContentLoaded', function () {
     const impressumModal = document.getElementById("impressumModal");
     const privacyPolicyModal = document.getElementById("privacyPolicyModal");

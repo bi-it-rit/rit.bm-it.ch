@@ -290,6 +290,8 @@ h2 {
   margin-top: 20px;
 }
 
+/* -----------------------------Responsive Design----------------------------- */
+
 /* Media query for tablet responsiveness */
 @media (max-width: 768px) {
   .about-text {

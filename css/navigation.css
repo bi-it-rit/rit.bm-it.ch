@@ -60,6 +60,8 @@
     color: #e56699;
 }
 
+/* -----------------------------Responsive Design----------------------------- */
+
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     .navigation {
