@@ -398,6 +398,7 @@ footer {
 /* Hover effect for email link */
 .imp-mail:hover {
   color: #e81e0b;
+  text-decoration: underline;
 }
 
 /* Modal container styling */
