@@ -24,5 +24,5 @@ If you have any suggestions or run into issues with my website, I’d love to he
 
 ## Thanks for Stopping By!
 
-Feel free to poke around my portfolio. I hope you find something you like! If you have any questions or just want to say hi, don’t hesitate to reach out. 😊 → [My website](https://www.rit.bm-it)
+Feel free to poke around my portfolio. I hope you find something you like! If you have any questions or just want to say hi, don’t hesitate to reach out. 😊 → [My website](https://www.rit.bm-it.ch)
 
